@@ -86,7 +86,6 @@ body{
   height: 420px;
   overflow: hidden;
   z-index: 2;
-  /* border: 1px solid white; */
 }
 .login-form{
   position: absolute;
@@ -241,4 +240,31 @@ header{
       flex-direction: column;
       gap: 0;
   }
+}
+main {
+  color: #fff;
+  margin: 300px  300;
+  padding: 100px 100px;
+  max-width: 800px;
+  flex-grow: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+h2, h3{
+  margin: 50px;
+ justify-content: center;
+ text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
 }
