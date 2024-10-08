@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Quiz - Final Score</title>
+    <link rel="stylesheet" href="Home.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="last" class="flex-center flex-column">
+            <h1 id="TotalScore">0</h1>
+            
+            <form>
+                <input
+                    type="text"
+                    name="Name"
+                    id="name"
+                    placeholder="Enter your name"
+                />
+                <button
+                    type="submit"
+                    class="button"
+                    id="savescore"
+                    onclick="SaveTotalScore(event)"
+                >
+                Save
+                </button>
+            </form>
+
+            <a class="button" href="question.html">Try Again</a>
+            <a class="button" href="/">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="lastpage.js"></script>
+</body>
+</html>

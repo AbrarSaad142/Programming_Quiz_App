@@ -2,11 +2,14 @@ const questionelement = document.getElementById("questions");
 const Elements = Array.from(document.getElementsByClassName("choice_text"));
 const numberOfQuestionscount = document.getElementById("numberOfQuestions");
 const scorevalue =  document.getElementById("value");
+const questiontimer = document.getElementById("time_seconds");
+const timertext = document.getElementById("time_text")
 let Answer = false;
 let score = 0;
 let numberOfQuestions = 0;
 let newQuestions = [];
 let currentQuestion = 1;
+let timeleft = 30;
 
 const Questions = [
      {
@@ -138,5 +141,13 @@ const valueofScore = (val) => {
     scorevalue.innerText = score;
 };
 
-startQuiz();
-                                                                                                      
+const timer = setInterval(() => {
+    timeLeft--;
+    questionTimer.innerText = timeLeft;
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        window.location.href = 'lastpage.html';
+    }
+}, 1000);
+
+startQuiz();                                                                   
