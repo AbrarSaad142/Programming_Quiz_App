@@ -447,7 +447,8 @@ input::placeholder {
 .time_text {
   text-align: center;
 }
-.start{
+
+.start {
   display: flex;
   justify-content: center;
   align-items: center;
