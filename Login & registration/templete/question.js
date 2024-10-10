@@ -88,7 +88,7 @@ const startQuiz = () => {
 
 const getNewQuestion = () => {
     if (newQuestions.length === 0 || numberOfQuestions >= Max_Num) {
-        return window.location.assign('/lastPage.html');
+        return window.location.assign('end-page.html');
     }
 
     numberOfQuestions++;
@@ -146,7 +146,7 @@ const timer = setInterval(() => {
     questionTimer.innerText = timeLeft;
     if (timeLeft <= 0) {
         clearInterval(timer);
-        window.location.href = 'lastpage.html';
+        window.location.href = 'end-page.html';
     }
 }, 1000);
 
