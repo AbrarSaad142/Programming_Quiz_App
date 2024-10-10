@@ -357,7 +357,7 @@ h3 {
 .choice_text {
   padding: 1.5rem;
   justify-content: center;
- 
+  width: 100%;
 }
 
 
