@@ -2,14 +2,13 @@ const questionelement = document.getElementById("questions");
 const Elements = Array.from(document.getElementsByClassName("choice_text"));
 const numberOfQuestionscount = document.getElementById("numberOfQuestions");
 const scorevalue =  document.getElementById("value");
-const questiontimer = document.getElementById("time_seconds");
-const timertext = document.getElementById("time_text")
+const questionTimer = document.getElementById("time_seconds");
 let Answer = false;
 let score = 0;
 let numberOfQuestions = 0;
 let newQuestions = [];
 let currentQuestion = 1;
-let timeleft = 30;
+let timeLeft = 60;
 
 const Questions = [
      {
