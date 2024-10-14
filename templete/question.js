@@ -124,10 +124,6 @@ Elements.forEach(choice => {
 
         selectedChoice.parentElement.classList.add(apply);
 
-
-        console.log("Selected Answer: ", selectedAnswer);
-        console.log("Correct Answer: ", correctAnswer);
-
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(apply);
             getNewQuestion();
