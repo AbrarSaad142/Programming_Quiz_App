@@ -8,7 +8,7 @@ let score = 0;
 let numberOfQuestions = 0;
 let newQuestions = [];
 let currentQuestion = 1;
-let timeLeft = 60;
+let timeLeft = 180;
 
 const Questions = [
      {
