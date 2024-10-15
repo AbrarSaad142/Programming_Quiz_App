@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    {% block body%}
     <div class="wrapper">
         <nav class="nav">
             <div class="nav-menu" id="navMenu">
@@ -29,7 +30,7 @@
             </div>
         </nav>
         <!----------------------------- Form box ----------------------------------->
-        <div class="form-box">
+        <form class="form-box">
 
               <!------------------- login form -------------------------->
               <div class="login-form" id="login">
@@ -95,7 +96,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 <script>
     function myFunction(){
@@ -131,7 +132,7 @@
             d.style.opacity = 1;
         }
     </script>
-
+{% endblock %}
 </body>
 
 </html>
