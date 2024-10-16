@@ -5,22 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Login & Registration</title>
 </head>
 
 <body>
-    {% block body%}
     <div class="wrapper">
         <nav class="nav">
-            <div class="nav-menu" id="navMenu">
+            <!-- <div class="nav-menu" id="navMenu">
                 <ul>
                     <li><a href="quiz-page.html" class="link active">Home</a></li>
                     <li><a href="about-page.html" class="link">About</a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="nav-button">
                 <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
                 <button class="btn" id="registrationBtn" onclick="register()">Sign Up</button>
@@ -30,8 +28,7 @@
             </div>
         </nav>
         <!----------------------------- Form box ----------------------------------->
-        <form class="form-box">
-
+        <form class="form-box" method="POST" action="authentication.php">
               <!------------------- login form -------------------------->
               <div class="login-form" id="login">
                 <div class="top">
@@ -39,15 +36,15 @@
                     <header>Login</header>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Username or Email">
+                    <input name="login_email" type="text" class="input-field" placeholder="Username or Email">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Password">
+                    <input name="login_password" type="password" class="input-field" placeholder="Password">
                     <i class="bx bx-lock"></i>
                 </div>
                 <div class="input-box">
-                    <input type="submit" class="submit" value="Sign In">
+                    <input type="submit" class="submit" value="Sign In" name="login_submit">
                 </div>
                 <div class="two-column">
                     <div class="one">
@@ -67,24 +64,24 @@
                 </div>
                 <div class="two-forms">
                     <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Firstname">
+                        <input type="text" class="input-field" placeholder="Firstname" id="firstname" name="firstname">
                         <i class="bx bx-user"></i>
                     </div>
                     <div class="input-box">
-                        <input type="text" class="input-field" placeholder="Lastname">
+                        <input type="text" class="input-field" placeholder="Lastname" id="lastname" name="lastname">
                         <i class="bx bx-user"></i>
                     </div>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Email">
+                    <input type="email" class="input-field" placeholder="Email" id="email" name="email">
                     <i class="bx bx-envelope"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Password">
+                    <input type="password" class="input-field" placeholder="Password" id="password" name="password">
                     <i class="bx bx-lock"></i>
                 </div>
                 <div class="input-box">
-                    <input type="submit" class="submit" value="Register">
+                    <input type="submit" class="submit" value="Register" name="register_submit">
                 </div>
                 <div class="two-column">
                     <div class="one">
@@ -107,32 +104,93 @@
             i.className = "nav-menu";
         }
     }
+    
+    var loginBtn = document.getElementById("loginBtn");
+    var registerBtn = document.getElementById("registrationBtn");
+    var loginForm = document.getElementById("login");
+    var registerForm = document.getElementById("register");
+
+    function login(){
+        loginForm.style.left = "4px";
+        registerForm.style.right = "-520px";
+        loginBtn.className += " white-btn";
+        registerBtn.className = "btn";
+        loginForm.style.opacity = 1;
+        registerForm.style.opacity = 0;
+    }
+
+    function register(){
+        loginForm.style.left = "-510px";
+        registerForm.style.right = "5px";
+        loginBtn.className = "btn";
+        registerBtn.className += " white-btn";
+        loginForm.style.opacity = 0;
+        registerForm.style.opacity = 1;
+    }
+
+    function validateLogin() {
+        const email = document.querySelector('input[name="login_email"]');
+        const password = document.querySelector('input[name="login_password"]');
+        
+        if (!email.value) {
+            alert("Email is required.");
+            email.focus();
+            return false;
+        }
+
+        if (!password.value) {
+            alert("Password is required.");
+            password.focus();
+            return false;
+        }
+
+        return true;
+    }
+
+    function validateRegistration() {
+        const firstname = document.getElementById('firstname');
+        const lastname = document.getElementById('lastname');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+
+        if (!firstname.value) {
+            alert("Firstname is required.");
+            firstname.focus();
+            return false;
+        }
+
+        if (!lastname.value) {
+            alert("Lastname is required.");
+            lastname.focus();
+            return false;
+        }
+
+        if (!email.value) {
+            alert("Email is required.");
+            email.focus();
+            return false;
+        }
+
+        if (!password.value) {
+            alert("Password is required.");
+            password.focus();
+            return false;
+        }
+
+        return true;
+    }
+
+    document.querySelector('input[name="login_submit"]').addEventListener('click', function(event) {
+        if (!validateLogin()) {
+            event.preventDefault();
+        }
+    });
+
+    document.querySelector('input[name="register_submit"]').addEventListener('click', function(event) {
+        if (!validateRegistration()) {
+            event.preventDefault();
+        }
+    });
 </script>
-    <script>
-        var a = document.getElementById("loginBtn");
-        var b = document.getElementById("registrationBtn");
-        var c = document.getElementById("login");
-        var d = document.getElementById("register");
-
-        function login(){
-            c.style.left = "4px";
-            d.style.right = "-520px";
-            a.className += " white-btn";
-            b.className = "btn";
-            c.style.opacity = 1;
-            d.style.opacity = 0;
-        }
-
-        function register(){
-            c.style.left = "-510px";
-            d.style.right = "5px";
-            a.className = "btn";
-            b.className += " white-btn";
-            c.style.opacity = 0;
-            d.style.opacity = 1;
-        }
-    </script>
-{% endblock %}
 </body>
-
 </html>
