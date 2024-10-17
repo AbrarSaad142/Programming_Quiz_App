@@ -325,13 +325,30 @@ h3 {
 
 .my-button {
   position: absolute;
-  /* or relative */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
   text-decoration: none;
   color: white;
+}
+
+.start-button {
+  text-align: center;
+  font-size: 35px;  
+  color: black;
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Popp, sans-serif;
 }
 
 .choice_container {
@@ -400,13 +417,23 @@ h3 {
 }
 
 .button {
-  font-size: 1.8rem;
-  padding: 1rem;
-  width: 20rem;
+<<<<<<< HEAD
+=======
   text-align: center;
-  background-color: white;
+  text-decoration: none; 
+  font-family: Popp, sans-serif;
+  justify-content: center;
+>>>>>>> 3ef4f3c239f893b67c7d6d49b6cc2ef47e607367
+  font-size: 1.8rem;
+  width: 20rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
   margin-top: 150px;
-  margin-bottom: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  transition: .3s ease;
 }
 
 .button:hover {
