@@ -27,6 +27,7 @@ The **Quiz App** is designed to help users test their knowledge on different top
   - HTML
   - CSS
   - PHP
+  - JavaScript
   - MySQL
 
 ## Instructions
