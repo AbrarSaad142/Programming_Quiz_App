@@ -47,7 +47,7 @@ if (isset($_POST['login_submit'])) {
 
     if (empty($login_user) || empty($login_password)) {
         $_SESSION['error'] = "Email and Password are required.";
-        header("Location: index-page.html");
+        header("Location:index-page.html");
         exit();
     }
 
@@ -58,7 +58,7 @@ if (isset($_POST['login_submit'])) {
     if ($user && password_verify($login_password, $user['password'])) {
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = htmlspecialchars($user['firstname']);
-        header("Location: quiz-page.html");
+        header("Location:quiz-page.html");
         exit();
     } else {
         $_SESSION['error'] = "Invalid email or password.";

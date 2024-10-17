@@ -15,12 +15,15 @@
                     <li><a href="quiz-page.html" class="link active">Quiz</a></li>
                 </ul>
             </div>
+            <div class="nav-button">
+            <button class="btn" id="registrationBtn" onclick="logout()">Logout</button>
+         </div>
 </nav>
     <div class="container">
         <div id="last" class="flex-center flex-column">
-            <a class="button white-btn" href="question-page.php">Try Again</a>
+            <a class="button white-btn" href="question-page.html">Try Again</a>
             <!-- <h1 class="button" id="TotalScore"><?php $_SESSION['score']?></h1> -->
-            <a class="button white-btn" href="index-page.html">Back to Home</a>
+            <a class="button white-btn" href="about-page.html">Back to Home</a>
         </div>
     </div>
 
