@@ -27,6 +27,5 @@
         </div>
     </div>
 
-    <script src="end-page.js"></script>
 </body>
 </html>
