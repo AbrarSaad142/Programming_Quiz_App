@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Programming Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <nav class="nav">
-        <div class="nav-menu" id="navMenu">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title> Programming Quiz</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <nav class="nav">
+         <div class="nav-button">
+            <button class="btn" id="logoutBtn" onclick="logout()">Logout</button>
+         </div>
+         <div class="nav-menu" id="navMenu">
             <ul>
-                <li><a href="about-page.html" class="link">About</a></li>
-                <li><a href="quiz-page.html" class="link active">Quiz</a></li>
+               <li><a href="about-page.html" class="link active">About</a></li>
             </ul>
-        </div>
-    </nav>
-    <div class="quiz-container">
-        <div id="Home">
+         </div>
+      </nav>
+      <div class="quiz-container">
+         <div id="Home">
             <p class="my-button">if you're ready click
-                <br>
-                <br />
-                <a class="my-button" href="question-page.html"> Start</a>
-                </br>
+               <br>
+               <br>
+               <a class="btn my-button start-button" href="question-page.php"> Start</a>
+               </br>
             </p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 Quiz App</p>
-    </footer>
-</body>
-
+         </div>
+      </div>
+      <footer>
+         <p>&copy; 2024 Quiz App</p>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="logout.js"></script>
+   </body>
 </html>

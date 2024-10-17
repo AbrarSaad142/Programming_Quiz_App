@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOXICONS -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>About Quiz App</title>
-</head>
-<body>
-    <div class="wrapper">
-        <nav class="nav">
-
-            <div class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="about-page.html" class="link active">About</a></li>
-                    <li><a href="quiz-page.html" class="link">Quiz</a></li>
-                </ul>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- BOXICONS -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="style.css">
+      <title>About Quiz App</title>
+   </head>
+   <body>
+      <div class="wrapper">
+      <nav class="nav">
+         <div class="nav-button">
+            <button class="btn" id="registrationBtn" onclick="logout()">Logout</button>
+         </div>
+         <div class="nav-menu" id="navMenu">
+            <ul>
+               <li><a href="about-page.html" class="link active">About</a></li>
+               <li><a href="quiz-page.html" class="link">Quiz</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class=" about-container">
+         <main>
+            <div>
+               <h2>Learn More About Our Quiz App</h2>
             </div>
-</nav>
-<div class=" about-container">
-    <main>
-        <div>
-        <h2>Learn More About Our Quiz App</h2>
-    </div>
-        <p>
-            Welcome to our Quiz App! This application is designed to help users test their knowledge on various subjects. 
-            Our platform allows users to log in, take quizzes, and track their scores.
-        </p>
-        <h3>Quiz Features:</h3>
-        <ul>
-            <li>The quiz consist of 8 questions</li>
-            <li>Every correct answer scores 1 point</li>
-            <li>Every wrong answer scores 0 point</li>
-            <li>Score will be calculated through the quiz</li>
-	    <li>You have 180 seconds to finish your quiz</li>
-        </ul>
-    </main>
-
-    <footer>
-        <p>2024 Quiz App</p>
-    </footer>
-    </div>
-</body>
+            <p>
+               Welcome to our Quiz App! This application is designed to help users test their knowledge on various subjects. 
+               Our platform allows users to log in, take quizzes, and track their scores.
+            </p>
+            <h3>Quiz Features:</h3>
+            <ul>
+               <li>The quiz consist of 8 questions</li>
+               <li>Every correct answer scores 1 point</li>
+               <li>Every wrong answer scores 0 point</li>
+               <li>Score will be calculated through the quiz</li>
+               <li>You have 180 seconds to finish your quiz</li>
+            </ul>
+         </main>
+         <footer>
+            <p>2024 Quiz App</p>
+         </footer>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="logout.js"></script>
+   </body>
 </html>

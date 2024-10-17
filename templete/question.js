@@ -4,7 +4,7 @@ const numberOfQuestionscount = document.getElementById("numberOfQuestions");
 const scorevalue =  document.getElementById("value");
 const questionTimer = document.getElementById("time_seconds");
 let Answer = false;
-let score = 0;
+var score = 0;
 let numberOfQuestions = 0;
 let newQuestions = [];
 let currentQuestion = 1;
@@ -87,7 +87,7 @@ const startQuiz = () => {
 
 const getNewQuestion = () => {
     if (newQuestions.length === 0 || numberOfQuestions >= Max_Num) {
-        return window.location.assign('end-page.html');
+        return window.location.assign('end-page.php');
     }
 
     numberOfQuestions++;
@@ -140,8 +140,20 @@ const timer = setInterval(() => {
     timeLeft--;
     questionTimer.innerText = timeLeft;
     if (timeLeft <= 0) {
+        console.log(score);
+        
         clearInterval(timer);
-        window.location.href = 'end-page.html';
+            $.ajax({
+                url: 'updateScore.php',
+                method: 'POST',
+                data:{score: score},
+                success: function() {
+                    // window.location.href = 'end-page.php';
+                },
+                error: function() {
+                    alert('Logout failed. Please try again.');
+                }
+            });
     }
 }, 1000);
 

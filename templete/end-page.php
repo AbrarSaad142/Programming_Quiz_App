@@ -18,9 +18,9 @@
 </nav>
     <div class="container">
         <div id="last" class="flex-center flex-column">
-            <h1 id="TotalScore">0</h1>
-            <a class="button" href="question-page.html">Try Again</a>
-            <a class="button" href="index-page.html">Back to Home</a>
+            <a class="button white-btn" href="question-page.php">Try Again</a>
+            <!-- <h1 class="button" id="TotalScore"><?php $_SESSION['score']?></h1> -->
+            <a class="button white-btn" href="index-page.html">Back to Home</a>
         </div>
     </div>
 
